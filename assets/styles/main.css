@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+:root {
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+body {
+    background-color: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--title-color);
+    font-family: 'Ubuntu', 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+}
+
+#page-home {
+    height: 100vh;
+    background: url('../img/home-background.svg') no-repeat;
+    background-position: 35vw 20vh;
+}
+
+.content {  
+    max-width: 1100px;
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+
+.content-header a {
+    display: flex;
+    color: var(--title-color);
+    font-weight: bold;
+}
+
+.content-header a span {
+    display: flex;
+    background-image: url('../img/log-in.svg');
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.content main {
+    max-width: 560px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content main h1 {
+    font-size: 54px;
+}
+
+.content main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+.content main a {
+    width: 100%;
+    height: 72px;
+    max-width: 360px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    transition: 400ms;
+}
+
+.content main a:hover {
+    background-color: #2fb86e;
+}
+
+.content main a span {
+    width: 72px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content main a span::after {
+    content: "";
+    background-image: url('../img/search.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.content main a strong {
+    flex: 1;
+    text-align: center;
+}
+
+@media(max-width: 900px) {
+    #page-home {
+        background-position-x: 70vw ;
+    }
+
+    .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .content-header a{
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%) ;
+    }
+
+    .content main {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content main h1 {
+        font-size: 36px;
+    } 
+
+    .content main p {
+        font-size: 20px;
+    }
+}
